@@ -1,0 +1,13 @@
+.background {
+    background-color: aquamarine;
+}
+
+.brand{
+    font-family: 'Anton', sans-serif;
+    font-size: xx-large;
+    font-weight: 800;
+}
+
+.title{
+    font-size: 50px;
+}
