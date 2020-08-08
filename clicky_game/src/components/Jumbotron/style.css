@@ -1,0 +1,15 @@
+.jumbo{
+    height: 500px;
+    background-image: url("./wood-591631_1920.jpg");
+}
+
+.clickytitle{
+    font-weight: 900;
+    color: white;
+}
+
+.subhead{
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+}
