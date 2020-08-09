@@ -11,27 +11,40 @@ class App extends React.Component {
     state = {
         currentScore: 0,
         highScore: 0,
-        clicked: false
+        Images
+        // value: false
     }
 
 
     handleIncrement = () => {
         // We always use the setState method to update a component's state
-        if (this.state.clicked === false) {
+        // if (this.state.value === false) {
             this.setState({ currentScore: this.state.currentScore + 1 });
-            this.setState({ clicked: true })
+            // this.setState({ value: true})
             // This wouldn't work as expected
             // this.state.count = this.state.count + 1;
             this.handleHighScore();
-        }
-        else {
-            this.setState({ currentScore: 0 });
-        }
+            this.handleRandom();
+        // }
+        // else {
+        //     this.setState({ currentScore: 0 });
+        // }
 
     };
 
     handleHighScore = () => {
         this.setState({ highScore: this.state.highScore + 1 })
+    }
+
+    handleRandom = () => {
+        let image = this.state.Images;
+        for(let i = image.length-1; i > 0; i--){
+            const j = Math.floor(Math.random() * i)
+            const temp = image[i]
+            image[i] = image[j]
+            image[j] = temp
+          }
+          this.setState({ Images: image})
     }
 
 
@@ -42,6 +55,7 @@ class App extends React.Component {
                 name={image.name}
                 image={image.image}
                 click={this.handleIncrement}
+                // value={this.state.value}
             />
 
         )
