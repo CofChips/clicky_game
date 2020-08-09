@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Navbar() {
+function Navbar(props) {
 
     return (
         <nav className="navbar navbar-light background fixed-top">
@@ -10,7 +10,7 @@ function Navbar() {
                 Click an image to begin!
             </span>
             <span className="navbar-text">
-                Placeholder for score
+                Current Score: {props.current}
              </span>
         </nav>
     )
