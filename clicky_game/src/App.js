@@ -9,16 +9,30 @@ import Wrapper from "./components/Wrapper/index"
 
 class App extends React.Component {
     state = {
-        currentScore: 0
+        currentScore: 0,
+        highScore: 0,
+        clicked: false
     }
 
 
     handleIncrement = () => {
         // We always use the setState method to update a component's state
-        this.setState({ currentScore: this.state.currentScore + 1 });
-        // This wouldn't work as expected
-        // this.state.count = this.state.count + 1;
+        if (this.state.clicked === false) {
+            this.setState({ currentScore: this.state.currentScore + 1 });
+            this.setState({ clicked: true })
+            // This wouldn't work as expected
+            // this.state.count = this.state.count + 1;
+            this.handleHighScore();
+        }
+        else {
+            this.setState({ currentScore: 0 });
+        }
+
     };
+
+    handleHighScore = () => {
+        this.setState({ highScore: this.state.highScore + 1 })
+    }
 
 
 
@@ -33,7 +47,7 @@ class App extends React.Component {
         )
         return (
             <div>
-                <Navbar current={this.state.currentScore}/>
+                <Navbar current={this.state.currentScore} high={this.state.highScore} />
                 <Jumbotron />
                 <Wrapper>
                     {images}

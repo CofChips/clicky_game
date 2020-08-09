@@ -10,7 +10,7 @@ function Navbar(props) {
                 Click an image to begin!
             </span>
             <span className="navbar-text">
-                Current Score: {props.current}
+                Current Score: {props.current} | High Score: {props.high}
              </span>
         </nav>
     )
