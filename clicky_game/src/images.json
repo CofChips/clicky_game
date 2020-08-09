@@ -1,61 +1,73 @@
 [{
     "id":1,
     "name": "Johnny Cueto",
-    "image":"https://securea.mlb.com/mlb/images/players/head_shot/456501.jpg"
+    "image":"https://securea.mlb.com/mlb/images/players/head_shot/456501.jpg",
+    "clicked": true
 },
 {
     "id":2,
     "name": "Brandon Crawford",
-    "image":"https://securea.mlb.com/mlb/images/players/head_shot/543063.jpg"
+    "image":"https://securea.mlb.com/mlb/images/players/head_shot/543063.jpg",
+    "clicked": false
 },
 {
     "id":3,
     "name": "Evan Longoria",
-    "image":"https://securea.mlb.com/mlb/images/players/head_shot/446334.jpg"
+    "image":"https://securea.mlb.com/mlb/images/players/head_shot/446334.jpg",
+    "clicked": false
 },
 {
     "id":4,
     "name": "Pablo Sandoval",
-    "image":"https://securea.mlb.com/mlb/images/players/head_shot/467055.jpg"
+    "image":"https://securea.mlb.com/mlb/images/players/head_shot/467055.jpg",
+    "clicked": false
 },
 {
     "id":5,
     "name": "Donovan Solano",
-    "image":"https://securea.mlb.com/mlb/images/players/head_shot/456781.jpg"
+    "image":"https://securea.mlb.com/mlb/images/players/head_shot/456781.jpg",
+    "clicked": false
 },
 {
     "id":6,
     "name": "Alex Dickerson",
-    "image":"https://securea.mlb.com/mlb/images/players/head_shot/543105.jpg"
+    "image":"https://securea.mlb.com/mlb/images/players/head_shot/543105.jpg",
+    "clicked": false
 },
 {
     "id":7,
     "name": "Hunter Pence",
-    "image":"https://securea.mlb.com/mlb/images/players/head_shot/452254.jpg"
+    "image":"https://securea.mlb.com/mlb/images/players/head_shot/452254.jpg",
+    "clicked": false
 },
 {
     "id":8,
     "name": "Austin Slater",
-    "image":"https://securea.mlb.com/mlb/images/players/head_shot/596103.jpg"
+    "image":"https://securea.mlb.com/mlb/images/players/head_shot/596103.jpg",
+    "clicked": false
 },
 {
     "id":9,
     "name": "Mike Yastrzemski",
-    "image":"https://securea.mlb.com/mlb/images/players/head_shot/573262.jpg"
+    "image":"https://securea.mlb.com/mlb/images/players/head_shot/573262.jpg",
+    "clicked": false
 },
 {
     "id":10,
     "name": "Tyler Rogers",
-    "image":"https://securea.mlb.com/mlb/images/players/head_shot/643511.jpg"
+    "image":"https://securea.mlb.com/mlb/images/players/head_shot/643511.jpg",
+    "clicked": false
 },
 {
     "id":11,
     "name": "Tyler Heineman",
-    "image":"https://securea.mlb.com/mlb/images/players/head_shot/623168.jpg"
+    "image":"https://securea.mlb.com/mlb/images/players/head_shot/623168.jpg",
+    "clicked": false
 },
 {
     "id":12,
     "name": "Wilmer Flores",
-    "image":"https://securea.mlb.com/mlb/images/players/head_shot/527038.jpg"
+    "image":"https://securea.mlb.com/mlb/images/players/head_shot/527038.jpg",
+    "clicked": false
 }
 ]

@@ -11,24 +11,31 @@ class App extends React.Component {
     state = {
         currentScore: 0,
         highScore: 0,
-        Images
-        // value: false
+        Images,
+        Clicked: []
     }
 
 
-    handleIncrement = () => {
+    handleIncrement = (id) => {
         // We always use the setState method to update a component's state
-        // if (this.state.value === false) {
+        console.log("This is: ", this)
+        console.log("This id: ", id)
+        // console.log("Check id: ",id)
+        // console.log(this.state.Images[0].clicked)
+        if (this.state.Clicked.includes(id)) {
+            this.setState({ currentScore: 0 });
+            this.setState({ Clicked: [] })
+        }
+        else {
+
             this.setState({ currentScore: this.state.currentScore + 1 });
-            // this.setState({ value: true})
+            this.setState({ value: true })
             // This wouldn't work as expected
             // this.state.count = this.state.count + 1;
             this.handleHighScore();
             this.handleRandom();
-        // }
-        // else {
-        //     this.setState({ currentScore: 0 });
-        // }
+            this.handleState(id);
+        }
 
     };
 
@@ -38,13 +45,19 @@ class App extends React.Component {
 
     handleRandom = () => {
         let image = this.state.Images;
-        for(let i = image.length-1; i > 0; i--){
+        for (let i = image.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * i)
             const temp = image[i]
             image[i] = image[j]
             image[j] = temp
-          }
-          this.setState({ Images: image})
+        }
+        this.setState({ Images: image })
+    }
+
+    handleState = (id) => {
+        let newArray = this.state.Clicked;
+        newArray.push(id);
+        this.setState({ Clicked: newArray })
     }
 
 
@@ -54,8 +67,9 @@ class App extends React.Component {
             <ImageCard key={image.id.toString()}
                 name={image.name}
                 image={image.image}
-                click={this.handleIncrement}
-                // value={this.state.value}
+                id={image.id}
+                handleIncrement={this.handleIncrement}
+                value={this.state.value}
             />
 
         )

@@ -5,7 +5,7 @@ function ImageCard(props) {
     return (
         <div className="card">
       <div className="img-container">
-        <img alt={props.name} src={props.image} onClick={props.click}/>
+        <img alt={props.name} src={props.image} id = {props.id} onClick={(e)=>props.handleIncrement(e.target.id)}/>
       </div>
       
     </div>
