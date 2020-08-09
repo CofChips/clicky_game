@@ -12,7 +12,12 @@ class App extends React.Component {
         currentScore: 0,
         highScore: 0,
         Images,
-        Clicked: []
+        Clicked: [],
+        banner: ""
+    }
+
+    componentDidMount() {
+        this.setState({ banner: "Click an image to begin!"});
     }
 
 
@@ -24,7 +29,8 @@ class App extends React.Component {
         // console.log(this.state.Images[0].clicked)
         if (this.state.Clicked.includes(id)) {
             this.setState({ currentScore: 0 });
-            this.setState({ Clicked: [] })
+            this.setState({ Clicked: [] });
+            this.handleIncorrect();
         }
         else {
 
@@ -35,12 +41,16 @@ class App extends React.Component {
             this.handleHighScore();
             this.handleRandom();
             this.handleState(id);
+            this.handleCorrect();
         }
 
     };
 
     handleHighScore = () => {
-        this.setState({ highScore: this.state.highScore + 1 })
+        if (this.state.highScore <= this.state.currentScore && this.state.highScore < 12) {
+            this.setState({ highScore: this.state.highScore + 1 })
+        }
+
     }
 
     handleRandom = () => {
@@ -60,6 +70,14 @@ class App extends React.Component {
         this.setState({ Clicked: newArray })
     }
 
+    handleCorrect = () => {
+        this.setState({banner: "You gussed correctly!"})
+    }
+
+    handleIncorrect = () => {
+        this.setState({banner: "You gussed incorrectly!"})
+    }
+
 
 
     render() {
@@ -75,7 +93,7 @@ class App extends React.Component {
         )
         return (
             <div>
-                <Navbar current={this.state.currentScore} high={this.state.highScore} />
+                <Navbar current={this.state.currentScore} high={this.state.highScore} banner={this.state.banner} />
                 <Jumbotron />
                 <Wrapper>
                     {images}
