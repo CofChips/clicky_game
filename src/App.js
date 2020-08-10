@@ -23,11 +23,7 @@ class App extends React.Component {
 
 
     handleIncrement = (id) => {
-        // We always use the setState method to update a component's state
-        console.log("This is: ", this)
-        console.log("This id: ", id)
-        // console.log("Check id: ",id)
-        // console.log(this.state.Images[0].clicked)
+
         if (this.state.Clicked.includes(id)) {
             this.setState({ currentScore: 0 });
             this.setState({ Clicked: [] });
@@ -37,8 +33,6 @@ class App extends React.Component {
 
             this.setState({ currentScore: this.state.currentScore + 1 });
             this.setState({ value: true })
-            // This wouldn't work as expected
-            // this.state.count = this.state.count + 1;
             this.handleHighScore();
             this.handleRandom();
             this.handleState(id);
