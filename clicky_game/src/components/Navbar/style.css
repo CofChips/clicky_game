@@ -1,3 +1,17 @@
+/* @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+  
+    45% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0%;
+    }
+  } */
+
 .background {
     background-color: #F2552C;
 }
@@ -17,5 +31,25 @@
 }
 
 .title{
+    font-size: 30px;
+}
+
+.correct {
+    color: green;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    font-size: 30px;
+    transition: "0.2s";
+    /* opacity:0;
+
+    animation-name: fadeInOut;
+    animation-duration: 2s; */
+}
+
+.incorrect {
+    color: red;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    transition: "0.2s";
     font-size: 30px;
 }

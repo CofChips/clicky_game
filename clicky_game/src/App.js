@@ -2,9 +2,8 @@ import React from "react";
 import Navbar from "./components/Navbar/index";
 import Jumbotron from "./components/Jumbotron/index";
 import Images from "./images.json";
-import ImageCard from "./components/ImageCard/index"
-import Wrapper from "./components/Wrapper/index"
-
+import ImageCard from "./components/ImageCard/index";
+import Wrapper from "./components/Wrapper/index";
 
 
 class App extends React.Component {
@@ -13,11 +12,12 @@ class App extends React.Component {
         highScore: 0,
         Images,
         Clicked: [],
-        banner: ""
+        banner: "",
+        style: "navbar-text title"
     }
 
     componentDidMount() {
-        this.setState({ banner: "Click an image to begin!"});
+        this.setState({ banner: "Click an image to begin!" });
     }
 
 
@@ -71,11 +71,13 @@ class App extends React.Component {
     }
 
     handleCorrect = () => {
-        this.setState({banner: "You gussed correctly!"})
+        this.setState({ banner: "You guessed correctly!" })
+        this.setState({ style: "navbar-text correct" })
     }
 
     handleIncorrect = () => {
-        this.setState({banner: "You gussed incorrectly!"})
+        this.setState({ banner: "You guessed incorrectly!" })
+        this.setState({ style: "navbar-text incorrect" })
     }
 
 
@@ -93,7 +95,7 @@ class App extends React.Component {
         )
         return (
             <div>
-                <Navbar current={this.state.currentScore} high={this.state.highScore} banner={this.state.banner} />
+                <Navbar style={this.state.style} current={this.state.currentScore} high={this.state.highScore} banner={this.state.banner} />
                 <Jumbotron />
                 <Wrapper>
                     {images}
