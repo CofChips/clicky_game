@@ -4,6 +4,7 @@ import Jumbotron from "./components/Jumbotron/index";
 import Images from "./images.json";
 import ImageCard from "./components/ImageCard/index";
 import Wrapper from "./components/Wrapper/index";
+import Footer from "./components/Footer/index";
 
 
 class App extends React.Component {
@@ -89,7 +90,7 @@ class App extends React.Component {
                 image={image.image}
                 id={image.id}
                 handleIncrement={this.handleIncrement}
-                value={this.state.value}
+                // value={this.state.value}
             />
 
         )
@@ -100,6 +101,7 @@ class App extends React.Component {
                 <Wrapper>
                     {images}
                 </Wrapper>
+                <Footer />
 
             </div>
 
