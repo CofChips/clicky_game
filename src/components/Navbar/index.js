@@ -8,7 +8,7 @@ function Navbar(props) {
  <nav className="navbar background fixed-top">
             <ul className="w-100 m-0 p-0">
                 <li className="list text-left">
-                    <a className="navbar-brand brand" href="/">SF Giants Clicky Game!</a>
+                    <a className="navbar-brand brand" href="/clicky_game/">SF Giants Clicky Game!</a>
                 </li>
                 <li className="list text-center">
                     <span className={props.style}>
