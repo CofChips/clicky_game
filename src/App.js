@@ -22,7 +22,26 @@ class App extends React.Component {
     }
 
 
-    handleIncrement = (id) => {
+    // handleIncrement = (id) => {
+
+    //     if (this.state.Clicked.includes(id)) {
+    //         this.setState({ currentScore: 0 });
+    //         this.setState({ Clicked: [] });
+    //         this.handleIncorrect();
+    //     }
+    //     else {
+
+    //         this.setState({ currentScore: this.state.currentScore + 1 });
+    //         this.setState({ value: true })
+    //         this.handleHighScore();
+    //         this.handleRandom();
+    //         this.handleState(id);
+    //         this.handleCorrect();
+    //     }
+
+    // };
+
+    handleIncrement = ({target:{id}}) => {
 
         if (this.state.Clicked.includes(id)) {
             this.setState({ currentScore: 0 });
@@ -84,6 +103,7 @@ class App extends React.Component {
                 image={image.image}
                 id={image.id}
                 handleIncrement={this.handleIncrement}
+                // handleIncrement={()=>this.handleIncrement(image.id)}
                 // value={this.state.value}
             />
 
